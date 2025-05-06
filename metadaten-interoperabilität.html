@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Jakob Voß">
+  <title>Interoperabilität von Metadaten</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.0/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.1.0/dist/theme/black.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Interoperabilität von Metadaten</h1>
+  <p class="subtitle">DINI AG KIM Workshop 2025</p>
+  <p class="author">Jakob Voß</p>
+  <p class="date">6. Mai 2025</p>
+</section>
+
+<section>
+<section id="metadaten" class="title-slide slide level1">
+<h1>(Meta)daten</h1>
+
+</section>
+<section id="metadaten-1" class="slide level2">
+<h2>Metadaten</h2>
+<ul>
+<li class="fragment">Beschreibungen von beliebigen Objekten</li>
+<li class="fragment">In Form von Daten</li>
+</ul>
+</section>
+<section id="daten" class="slide level2">
+<h2>Daten</h2>
+<ul>
+<li class="fragment">Eindeutig unterscheidbare Werte</li>
+<li class="fragment">Lassen sich verlustfrei kopieren</li>
+<li class="fragment">Letztendlich immer eine Folge von Bits</li>
+</ul>
+</section>
+<section id="arten-von-daten-i" class="slide level2">
+<h2>Arten von Daten I</h2>
+<ul>
+<li class="fragment">Daten als Fakten</li>
+<li class="fragment">Daten als Beobachtungen</li>
+<li class="fragment"><strong>Daten als Zeichen</strong></li>
+</ul>
+</section>
+<section id="arten-von-daten-ii" class="slide level2">
+<h2>Arten von Daten II</h2>
+<ul>
+<li class="fragment"><strong>Strukturiert</strong> =&gt; mit
+Datenformat</li>
+<li class="fragment"><strong>Semi-Strukturiert</strong> =&gt; mit
+Datenstrukturierung-Format</li>
+<li class="fragment">Unstrukturiert</li>
+</ul>
+</section></section>
+<section id="übung-datenformate" class="title-slide slide level1">
+<h1>Übung: Datenformate</h1>
+
+</section>
+
+<section>
+<section id="interoperabilität" class="title-slide slide level1">
+<h1>Interoperabilität</h1>
+
+</section>
+<section id="definitionen" class="slide level2">
+<h2>Definitionen</h2>
+<p>§ 327e Abs. 2 S. 3 BGB (Produktmangel im Bürgelichen Gesetzbuch)</p>
+<div class="fragment">
+<p><strong>Funktionalität ist die Fähigkeit</strong> eines digitalen
+Produkts, seine <strong>Funktionen seinem Zweck entsprechend zu
+erfüllen</strong>.</p>
+</div>
+<div class="fragment">
+<p><strong>Kompatibilität ist die Fähigkeit</strong> eines digitalen
+Produkts, mit Hardware oder Software zu funktionieren, mit der digitale
+<strong>Produkte derselben Art</strong> in der Regel genutzt werden,
+ohne dass sie konvertiert werden müssen.</p>
+</div>
+<div class="fragment">
+<p><strong>Interoperabilität ist die Fähigkeit</strong> eines digitalen
+Produkts, <strong>mit anderer</strong> Hardware oder Software
+<strong>als</strong> derjenigen, mit der digitale Produkte
+<strong>derselben Art</strong> in der Regel genutzt werden, <strong>zu
+funktionieren</strong>.</p>
+</div>
+</section>
+<section id="definitionen-1" class="slide level2">
+<h2>Definitionen</h2>
+<p>§ 3 Abs. 2 und 4 GeoZG (Allgemeine Begriffe im
+Geodatenzugangsgesetz)</p>
+<div class="fragment">
+<p><strong>Metadaten sind Informationen, die</strong>
+Geo<strong>daten</strong> oder Geo<strong>datendienste
+beschreiben</strong> und es ermöglichen, Geodaten und Geodatendienste zu
+ermitteln, in Verzeichnisse aufzunehmen und zu nutzen.</p>
+</div>
+<div class="fragment">
+<p><strong>Interoperabilität ist die Kombinierbarkeit von Daten</strong>
+beziehungsweise die Kombinierbarkeit und Interaktionsfähigkeit
+verschiedener Systeme und Techniken <strong>unter Einhaltung gemeinsamer
+Standards</strong>.</p>
+</div>
+</section>
+<section id="definitionen-2" class="slide level2">
+<h2>Definitionen</h2>
+<ul>
+<li class="fragment"><strong>Kompatibilität</strong> ist die Fähigkeit
+zur Zusammenarbeit mit Systeme gleicher Art</li>
+<li class="fragment"><strong>Interoberabilität</strong> ist die
+Fähigkeit zur Zusammenarbeit unterschiedlicher Systeme</li>
+<li class="fragment"><strong>Metadaten</strong> <em>im engeren
+Sinne</em> sind Daten, die andere Daten oder Datensysteme
+beschreiben</li>
+</ul>
+</section>
+<section id="ebenen-der-interoperabilität" class="slide level2">
+<h2>Ebenen der Interoperabilität</h2>
+<ol type="1">
+<li class="fragment">Technische oder Strukturelle Interoperabilität oder
+<strong>Konnektivität</strong></li>
+<li class="fragment">Strukturelle und/oder <strong>Syntaktische
+Interoperabilität</strong></li>
+<li class="fragment"><strong>Semantische Interoperabilität</strong></li>
+</ol>
+</section>
+<section id="technische-interoperabilität" class="slide level2">
+<h2>1. Technische Interoperabilität</h2>
+<ul>
+<li class="fragment">Systeme sind miteinander verbunden</li>
+<li class="fragment">Systeme tauschen miteinander Daten aus</li>
+<li class="fragment">Systeme bieten <strong>Schnittstellen</strong>
+(APIs)</li>
+</ul>
+<p><em>Systeme sollen keine Datensilos sein</em></p>
+</section>
+<section id="beispiele-für-schnittstellen" class="slide level2">
+<h2>Beispiele für Schnittstellen</h2>
+<ul>
+<li class="fragment">HTTP</li>
+<li class="fragment">OAI-PMH</li>
+<li class="fragment">ActivityPub</li>
+<li class="fragment">IIIF</li>
+<li class="fragment">…</li>
+</ul>
+</section>
+<section id="syntaktische-interoperabilität" class="slide level2">
+<h2>2. Syntaktische Interoperabilität</h2>
+<p>Verwendung einheitlicher Syntax/Kodierungen:</p>
+<ul>
+<li class="fragment">Zeichenkodierungen</li>
+<li class="fragment">Datenstrukturierungssprachen</li>
+<li class="fragment">Datenformate</li>
+</ul>
+</section>
+<section id="beispiele-für-kodierungen" class="slide level2">
+<h2>Beispiele für Kodierungen</h2>
+<ul>
+<li class="fragment">Unicode (Emojis!)</li>
+<li class="fragment">CSV, JSON, XML, RDF</li>
+<li class="fragment">MARC/XML, GeoJSON…</li>
+</ul>
+</section>
+<section id="semantische-interoperabilität" class="slide level2">
+<h2>3. Semantische Interoperabilität</h2>
+<ul>
+<li class="fragment">Einheitliches <strong>konzeptuelles
+Datenmodell</strong></li>
+<li class="fragment">Gleiche Bedeutung</li>
+</ul>
+</section></section>
+<section id="spielepause" class="title-slide slide level1">
+<h1>Spielepause!</h1>
+
+</section>
+
+<section id="übung-datenformate-ii" class="title-slide slide level1">
+<h1>Übung: Datenformate II</h1>
+
+</section>
+
+<section>
+<section id="herausforderungen-und-strategien"
+class="title-slide slide level1">
+<h1>Herausforderungen und Strategien</h1>
+
+</section>
+<section id="herausforderungen" class="slide level2">
+<h2>Herausforderungen</h2>
+<ul>
+<li class="fragment">Datensilos und mangelnder Datenaustausch</li>
+<li class="fragment">Syntaktische Heterogenität</li>
+<li class="fragment">Semantische Heterogenität</li>
+<li class="fragment">Regelabweichungen</li>
+<li class="fragment">Physische vs. virtuelle Integration</li>
+<li class="fragment">…</li>
+</ul>
+</section>
+<section id="strategien" class="slide level2">
+<h2>Strategien</h2>
+<ul>
+<li class="fragment">Festlegung auf <strong>Standards</strong></li>
+<li class="fragment">Festlegung von <strong>Standards</strong>
+(Spezifikation)</li>
+</ul>
+</section>
+<section id="standards" class="slide level2">
+<h2>Standards</h2>
+<p>Siehe *Anleitung für schlechte Standards (2017) <a
+href="https://doi.org/10.5281/zenodo.1025743"
+class="uri">https://doi.org/10.5281/zenodo.1025743</a></p>
+</section>
+<section id="normdaten" class="slide level2">
+<h2>Normdaten</h2>
+<ul>
+<li class="fragment">Normdaten/Identifier/URIs</li>
+<li class="fragment">Normalisierung, Single Source of Truth
+(Only-Once-Prinzip)</li>
+</ul>
+</section>
+<section id="validierung" class="slide level2">
+<h2>Validierung</h2>
+<ul>
+<li class="fragment">Tests</li>
+<li class="fragment">Beispiele</li>
+<li class="fragment">Automatische Überprüfung</li>
+<li class="fragment">Tests</li>
+<li class="fragment">Tests</li>
+</ul>
+</section>
+<section id="datenmapping" class="slide level2">
+<h2>Datenmapping</h2>
+<ul>
+<li class="fragment">Konvertierung/Transformation von Daten aus einer in
+eine andere Form</li>
+<li class="fragment">Erstellung von Wrappern als standardisierte API auf
+Systeme (Zur Not mittels Screen-Scraping)</li>
+</ul>
+</section>
+<section id="kommunikation" class="slide level2">
+<h2>Kommunikation</h2>
+<ul>
+<li class="fragment">Feedback einholen: Fail fast, fail early</li>
+<li class="fragment">Ausreichend Kommunikation und Dokumentation</li>
+<li class="fragment">Ermittlung von Gemeinsamkeiten</li>
+</ul>
+</section>
+<section id="weitere-informationen" class="slide level2">
+<h2>Weitere Informationen</h2>
+<ul>
+<li class="fragment">Handbuch IT in Bibliotheken. Kapitel 6: <a
+href="https://it-in-bibliotheken.de/metadaten.html">Daten &amp;
+Metadaten</a></li>
+<li class="fragment">Anleitung für schlechte Standards (2017) <a
+href="https://doi.org/10.5281/zenodo.1025743"
+class="uri">https://doi.org/10.5281/zenodo.1025743</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@4.1.0/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@4.1.0/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.1.0/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@4.1.0/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
